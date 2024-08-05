@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Log-In</title>
+    <link rel="stylesheet" href="./presentation/user_op.css">
+    <script src="./treathment/script.js"></script>
+</head>
+
+<body onload="start()">
+    <div class="container">
+        <div class="header_div">
+            <div class="header_text">
+                <h1 class="petrolix">Pe<span class="danger">trol</span>ix</h1>
+            </div>
+        </div>
+        <div class="main">
+            <div class="main_left">
+                <div class="popup">
+                    <img id="ref_img" src="./presentation/img/failed.png">
+                    <h2 id="message">Message !</h2>
+                    <p id="message_details">Details about the previous message...</p>
+                    <button type="button" id="pop_btn">OK</button>
+                </div>
+                <div class="sign_in_form">
+                    <!--<form name="log_in_form" id="form_inputs" method="post">-->
+                    <div class="form_header">
+                        <h1>Log-In</h1>
+                    </div>
+                    <div class="form_body">
+                        <h3 for="nexter">Email</h3>
+                        <input type="email" name="user_email" id="in_2" required placeholder="fill in your email">
+                        <h3 for="nexter">Password</h3>
+                        <input type="password" name="user_password" id="in_3" required placeholder="fill in your password" minlength="5" maxlength="32"><br>
+                        <input type="hidden" name="hidden_code" id="in_6"><br>
+                        <input type="submit" value="Log-In" id="form_submit_log">
+                        <h3 class="to_center">Don't have an account ?</h3>
+                        <h2 class="to_center">
+                            <a href="./presentation/sign_in.html">Sign-In</a>
+                        </h2>
+                    </div>
+                    <!--</form>-->
+                </div>
+            </div>
+            <div class="main_right" id="div_alerts">
+                <div class="img_div">
+                    <img src="./presentation/img/log_in.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./treathment/log_in.js"></script>
+    <script src="./treathment/jquery-3.6.0.js"></script>
+</body>
+
+</html>

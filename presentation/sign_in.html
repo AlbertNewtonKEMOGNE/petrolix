@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Sign-In</title>
+    <link rel="stylesheet" href="./user_op.css">
+    <script src="../treathment/script.js"></script>
+</head>
+
+<body onload="loadingSignIn()">
+    <div class="container">
+        <div class="header_div">
+            <div class="header_text">
+                <h1 class="petrolix">Pe<span class="danger">trol</span>ix</h1>
+            </div>
+        </div>
+        <div class="main">
+            <div class="main_left">
+                <div class="popup">
+                    <img id="ref_img" src="./img/success.png">
+                    <h2 id="message">Message !</h2>
+                    <p id="message_details">Details about the previous message...</p>
+                    <button type="button" id="pop_btn">OK</button>
+                </div>
+                <div class="sign_in_form">
+                    <!--<form name="sign_in_form" id="form_inputs" method="post">-->
+                    <div class="form_header">
+                        <h1>Sign-In</h1>
+                        <h2>Please Fill in good information</h2>
+                        <h2>we will use to secure your money</h2>
+                    </div>
+                    <div class="form_body">
+                        <h3 for="nexter">Full Name</h3>
+                        <input type="text" name="user_name" id="in_1" required placeholder="fill in your name" minlength="5" maxlength="32">
+                        <h3 for="nexter">Email</h3>
+                        <input type="email" name="user_email" id="in_2" required placeholder="fill in your email">
+                        <h3 for="nexter">Password</h3>
+                        <input type="password" name="user_password" id="in_3" required placeholder="fill in your password" minlength="5" maxlength="32">
+                        <h3 for="nexter">Confirm Password</h3>
+                        <input type="password" name="user_password_confirm" id="in_4" required placeholder="Confirm your password" minlength="5" maxlength="32">
+                        <h3 for="nexter">Sponsor Code</h3>
+                        <input type="text" name="sponsor_code" id="in_5" placeholder="fill in your sponsor's code" minlength="5" maxlength="5">
+                        <input type="hidden" name="hidden_code" id="in_6"><br>
+                        <p>By clicking on "Sign-In", you agree you've read and understand our
+                            <a href="">Rules and Conditions</a>
+                        </p>
+                        <input type="submit" value="Sign-In" id="form_submit_sign">
+                        <h3 class="to_center">Already have an account ?</h3>
+                        <h2 class="to_center">
+                            <a href="../index.html ">Log-In</a>
+                        </h2>
+                    </div>
+                    <!--</form>-->
+                </div>
+            </div>
+            <div class="main_right ">
+                <div class="img_div ">
+                    <img src="./img/sign_in.png " alt=" ">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../treathment/sign_in.js"></script>
+    <script src="../treathment/jquery-3.6.0.js"></script>
+</body>
+
+</html>

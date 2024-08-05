@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Account</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="../treathment/script.js"></script>
+</head>
+
+<body onload="refresh()">
+    <div class="container">
+        <div class="nav_div">
+            <div class="header_div">
+                <div class="first_header">
+                    <div class="header_text">
+                        <h1 class="petrolix">Pe<span class="danger">trol</span>ix</h1>
+                    </div>
+                    <div class="global_info">
+                        <div class="header_daily">
+                            <h4>Daily earnings</h4>
+                            <input type="text" disabled id="account_daily" value="today : $0.00">
+                        </div>
+                        <div class="header_plan">
+                            <h4>Refer friends</h4>
+                            <input type="text" disabled id="account_refers" value=" 0 friend(s)">
+                        </div>
+                        <div class="header_plan">
+                            <h4>Referral code</h4>
+                            <input type="text" disabled id="account_code" value="ref: XM2S1">
+                        </div><br>
+
+                    </div>
+                    <div class="header_amount">
+                        <h3 class="amount_text">Amount</h3>
+                        <input type="text" class="amount_dollar" disabled id="account_amount" value="$0.00">
+                    </div>
+                </div>
+                <div class="second_header">
+                    <input type="button" id="deposit_for_pop" value="Deposit">
+                    <input type="button" id="withdraw_for_pop" value="Withdraw">
+                </div>
+                <p>Amount withdrawable :
+                    <span id="withdrawable">
+                        $0.00
+                    </span><br> User : <b><span id="actual_user">
+                        
+                    </span></b>
+                </p>
+                <div class="popup">
+                    <img id="ref_img" src="./img/success.png">
+                    <h2 id="message">Message !</h2>
+                    <p id="message_details">Details about the previous message...</p>
+                    <select class="no_see_input_1" name="dep_type_pop" id="in_1">
+                        <option value="1">Standard</option>
+                        <option value="2">Referral</option>
+                        <option value="3">Cost</option>
+                    </select><br>
+                    <input type="number" class="no_see_input_2" name="in_amount_pop" id="in_2" required placeholder="10.0" minlength="1" maxlength="4">
+                    <button type="button" id="pop_btn">OK</button>
+                </div>
+            </div>
+        </div>
+        <div class="up_center">
+            <input type="search" name="share_link" id="share_link" class="share_link" disabled value="./sign_in.html?ref=XM2S1">&nbsp;&nbsp;
+            <small>Click on the button to copy link and share to friends</small>&nbsp;&nbsp;
+            <input type="button" value="Sponsor Friends" class="share_btn" id="sponsor_friends_btn">
+        </div>
+        <div class="center">
+            <div class="plan" id="plan_standard">
+                <h3 class="plan_header">Standard Investment Plan</h3>
+                <img src="./img/standard.png" alt="">
+                <h6>Click and start to invest now</h6>
+            </div>
+            <div class="plan" id="plan_referral">
+                <h3 class="best_plan">Best no cost Investment with referrals</h3>
+                <img src="./img/referal.png" alt="">
+                <h6>Click and start to invest now</h6>
+            </div>
+            <div class="plan" id="plan_cost">
+                <h3 class="cost_plan">Cost Investment Plan</h3>
+                <img src="./img/cost.png" alt="">
+                <h6>Click and start to invest now</h6>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="history">
+                <h3 class="history_header">Total deposits</h3>
+                <img src="./img/deposit.png" alt="">
+                <div class="total_deposits">
+                    <h1 id="total_deposits_text">$0.00</h1>
+                </div>
+            </div>
+            <div class="history">
+                <h3 class="history_header">Total withdrawals</h3>
+                <img src="./img/withdraw.png" alt="">
+                <div class="total_withdrawals">
+                    <h1 id="total_withdrawals_text">$0.00</h1>
+                </div>
+            </div>
+            <div class="history">
+                <h3 class="history_header">Total earnings</h3>
+                <img src="./img/actual_plan.png" alt="">
+                <div class="total_earnings">
+                    <h1 id="total_earnings_text">$0.00</h1>
+                </div>
+            </div>
+            <div class="history">
+                <h3 class="history_header">Actual Investment plan(s)</h3>
+                <i class="icon"></i>
+                <div class="recent_transactions">
+                    <div class="type_recent">
+                        <h4 class="h4_bottom">Plan</h4>
+                        <h5>Standard</h5>
+                        <h5>Referral</h5>
+                        <h5>Cost</h5>
+                    </div>
+                    <div class="amount_recent">
+                        <h4 class="h4_bottom">Amount</h4>
+                        <h5 id="amount_in_standard">$0.00</h5>
+                        <h5 id="amount_in_referral">$0.00</h5>
+                        <h5 id="amount_in_cost">$0.00</h5>
+                    </div>
+                </div>
+
+            </div>
+            <div class="history">
+                <h3 class="history_header">Recent transactions</h3>
+                <i class="icon"></i>
+                <div class="recent_transactions">
+                    <div class="type_recent">
+                        <h4 class="h4_bottom">Operation</h4>
+                        <h5 id="recent_operation_1">Withdraw</h5>
+                        <h5 id="recent_operation_2">Withdraw</h5>
+                        <h5 id="recent_operation_3">Deposit</h5>
+                        <h5 id="recent_operation_4">Withdraw</h5>
+                        <h5 id="recent_operation_5">Deposit</h5>
+                    </div>
+                    <div class="amount_recent">
+                        <h4 class="h4_bottom">Amount</h4>
+                        <h5 id="recent_operation_1_amount">$0.00</h5>
+                        <h5 id="recent_operation_2_amount">$0.00</h5>
+                        <h5 id="recent_operation_3_amount">$0.00</h5>
+                        <h5 id="recent_operation_4_amount">$0.00</h5>
+                        <h5 id="recent_operation_5_amount">$0.00</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="history">
+                <h3 class="history_header">Best transactions</h3>
+                <i class="icon"></i>
+                <div class="best_transactions">
+                    <div class="type_best">
+                        <h4 class="h4_bottom">Operation</h4>
+                        <h4 id="best_first_operation">Withdraw</h4>
+                        <h4 id="best_second_operation">Deposit</h4>
+                    </div>
+                    <div class="amount_best">
+                        <h4 class="h4_bottom">Amount</h4>
+                        <h4 id="best_first_operation_amount">$0.00</h4>
+                        <h4 id="best_second_operation_amount">$0.00</h4>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <input type="hidden" name="hidden_code" id="in_6"><br>
+    </div>
+    <script src="../treathment/account.js"></script>
+    <script src="../treathment/jquery-3.6.0.js"></script>
+
+</body>
+
+</html>
